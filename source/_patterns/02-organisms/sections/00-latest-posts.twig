@@ -1,0 +1,52 @@
+<section class="latest-posts">
+  {% if heading %}
+    {% include "@atoms/text/00-heading.twig" with
+      {
+        heading: {
+          heading_level: 2,
+          modifier: 'latest-posts__heading',
+          title: 'Latest Posts',
+          url: ''
+        }
+      } only
+    %}
+  {% endif %}
+  <div class="latest-posts__listing">
+    <div class="latest-posts__listing--featured">
+      {% for item in latest_posts %}
+        {% if loop.first %}
+          {% include "@molecules/card/08-card.twig" with
+            {
+              card: item.card
+            } only
+          %}
+        {% endif %}
+      {% endfor %}
+    </div>
+    <ul class="latest-posts__list">
+      {% for item in latest_posts %}
+        {% if not loop.first %}
+          <li class="latest-posts__item">
+            {% include "@molecules/card/08-card.twig" with
+              {
+                card: item.card
+              } only
+            %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="latest-posts__cta">
+    {%
+      include '@atoms/buttons/00-button.twig' with
+      {
+        button: {
+          modifier: '',
+          text: "Load more posts",
+          url: "#"
+        }
+      } only
+    %}
+  </div>
+</section>

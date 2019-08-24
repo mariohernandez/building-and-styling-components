@@ -1,0 +1,17 @@
+card:
+  date: March 16, 2020
+  heading:
+    heading_level: 2
+    modifier: 'card__title'
+    title: The beauty of something
+    url: '#'
+  image: <img src='https://placeimg.com/640/350/nature' alt='The beauty of nature'>
+  modifier:
+  tags:
+    - label: Drupal
+      url: '#'
+    - label: Components
+      url: '#'
+    - label: DrupalCamp LA
+      -url: '#'
+  teaser: 'Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.'

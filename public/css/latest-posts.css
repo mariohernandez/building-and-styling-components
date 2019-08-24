@@ -1,0 +1,49 @@
+.latest-posts {
+  margin: 40px;
+}
+
+/* Section title. */
+.latest-posts__heading {
+  border-bottom: 1px solid #a2a2a2;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  margin: 0 auto;
+  padding-left: 50px;
+  text-transform: uppercase;
+}
+
+/* Container for featured post. */
+.latest-posts__listing--featured {
+  background-color: #f5f5f5;
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+/* List of cards below featured card. */
+.latest-posts__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 60px auto;
+  max-width: 1200px;
+}
+
+/* Sets max width on individual cards. */
+.latest-posts__item {
+  max-width: 350px;
+}
+
+/* Turning on flex grow allows for tags to be
+moved all the way to bottom of card by using margin-top auto on them.
+No need to use absolute position. */
+.latest-posts__item,
+.latest-posts__item .card,
+.latest-posts__item .card__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.latest-posts__cta {
+  text-align: center;
+}

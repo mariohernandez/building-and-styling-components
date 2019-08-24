@@ -1,0 +1,29 @@
+/* Global button styles. */
+.button {
+  background-color: #c25421;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 2px;
+  padding: 10px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover and focus styles. */
+.button:hover,
+.button:focus {
+  background-color: #a7481c;
+  color: #ffffff;
+}
+
+/* Ghost button styles. */
+.button.button--ghost {
+  background-color: transparent;
+  border-color: #c25421;
+  color: #c25421;
+}

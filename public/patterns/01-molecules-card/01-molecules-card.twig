@@ -1,0 +1,47 @@
+<article class="card{% if card.modifier %} {{ card.modifier }}{% endif %}">
+  {% if card.image %}
+    <div class="card__media">
+      {{ card.image }}
+    </div>
+  {% endif %}
+
+  <div class="card__content">
+    {% if card.heading %}
+      {%
+        include '@atoms/text/00-heading.twig' with {
+          heading: card.heading
+        }
+      %}
+    {% endif %}
+
+    {% if card.date %}
+      {%
+        include '@atoms/text/08-eyebrow.twig' with
+        {
+          eyebrow: {
+            text: card.date,
+            modifier: "card__date"
+          }
+        } only
+      %}
+    {% endif %}
+
+    {% if card.teaser %}
+      <div class="card__teaser">
+        <p>{{ card.teaser }}</p>
+      </div>
+    {% endif %}
+
+    {% if card.tags %}
+      <ul class="card__tags">
+        {% for tag in card.tags %}
+          <li class="card__tag--item">
+            <a href="{{ tag.url }}" class="card__tag--link">
+              {{ tag.label }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</article>
